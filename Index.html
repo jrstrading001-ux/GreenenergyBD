@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Energy BD - Solar Net Metering & Renewable Energy Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Brand Logo -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-11 h-11 bg-gradient-to-tr from-brand-600 to-emerald-400 rounded-xl flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-solar-panel text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-black tracking-tight text-slate-900">Green Energy <span class="text-brand-600">BD</span></span>
+                        <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">Solar Net Metering Solutions</span>
+                    </div>
+                </a>
+
+                <!-- English Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="font-medium text-slate-600 hover:text-brand-600 transition-colors">Home</a>
+                    <a href="#products" class="font-medium text-slate-600 hover:text-brand-600 transition-colors">Products</a>
+                    <a href="#netmetering" class="font-medium text-slate-600 hover:text-brand-600 transition-colors">How Net Metering Works</a>
+                    <a href="#about" class="font-medium text-slate-600 hover:text-brand-600 transition-colors">About Us</a>
+                    <a href="#contact" class="font-medium text-slate-600 hover:text-brand-600 transition-colors">Contact</a>
+                </div>
+
+                <!-- Action Buttons & Shopping Cart -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button onclick="openCartModal()" class="relative p-2.5 text-slate-600 hover:text-brand-600 hover:bg-slate-100 rounded-full transition">
+                        <i class="fa-solid fa-cart-shopping text-lg"></i>
+                        <span id="cart-badge" class="absolute -top-1 -right-1 bg-brand-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">0</span>
+                    </button>
+                    <a href="#contact" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-xl font-semibold shadow-lg shadow-brand-600/20 transition-all active:scale-95">
+                        Get Quote
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center space-x-3 md:hidden">
+                    <button onclick="openCartModal()" class="relative p-2 text-slate-600">
+                        <i class="fa-solid fa-cart-shopping text-xl"></i>
+                        <span id="cart-badge-mobile" class="absolute -top-1 -right-1 bg-brand-600 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+                    </button>
+                    <button onclick="toggleMobileMenu()" class="p-2.5 text-slate-700 hover:bg-slate-100 rounded-lg">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile English Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium">Home</a>
+            <a href="#products" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium">Products</a>
+            <a href="#netmetering" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium">How Net Metering Works</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium">About Us</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium">Contact</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block text-center bg-brand-600 text-white py-3 rounded-xl font-semibold mt-2">Get Free Quote</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative overflow-hidden bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white py-20 lg:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-brand-500/10 border border-brand-500/30 px-4 py-1.5 rounded-full text-brand-400 text-sm font-medium">
+                        <i class="fa-solid fa-bolt-lightning text-amber-400"></i>
+                        <span>BPDB, BREB, DPDC & DESCO Approved Net Meters</span>
+                    </div>
+                    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-snug">
+                        Official Solar <span class="bg-gradient-to-r from-brand-400 to-cyan-400 bg-clip-text text-transparent">Net Metering Devices</span> & Solutions
+                    </h1>
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl">
+                        Export excess solar power back to the national grid and eliminate electricity bills. We stock genuine Secure Meters engineered for maximum accuracy, compliance, and reliability.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#products" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-500 text-white text-center px-8 py-4 rounded-xl font-bold shadow-lg transition">
+                            Explore Products <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-center px-8 py-4 rounded-xl font-bold transition">
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="relative bg-gradient-to-tr from-slate-800 to-slate-700 p-6 rounded-3xl border border-slate-700 shadow-2xl text-center">
+                        <div class="relative h-64 w-full bg-slate-900 rounded-2xl overflow-hidden mb-4 border border-slate-800 flex items-center justify-center">
+                            <img 
+                                src="images/saralnet.jpg" 
+                                alt="Saral Solar Accounting Meter" 
+                                class="w-full h-full object-contain p-4" 
+                                onerror="this.onerror=null; this.src='https://placehold.co/600x400/0f172a/10b981?text=Saral+Solar+Net+Meter';"
+                            >
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-400 bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20">Featured Device</span>
+                        <h3 class="text-xl font-bold text-white mt-3">Saral Solar Accounting Meter</h3>
+                        <p class="text-xs text-slate-400 mt-1">Single Phase Direct Bidirectional Net Meter by Secure Meters</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-20 bg-slate-100/80 border-y border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-brand-600 font-bold uppercase tracking-widest text-xs bg-brand-50 px-3.5 py-1.5 rounded-full border border-brand-200">Our Product Catalog</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Official Solar Net Meters</h2>
+                <p class="text-slate-600 mt-3 text-sm sm:text-base">
+                    High precision bidirectional net meters designed for residential, commercial, and industrial solar PV grid integrations in Bangladesh.
+                </p>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Product 1: Saral Solar Accounting Meter -->
+                <div class="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition overflow-hidden flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-60 bg-slate-50 p-4 border-b border-slate-100 flex items-center justify-center overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-brand-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider z-10">Single Phase</span>
+                            <img 
+                                src="images/saralnet.jpg"
+                                alt="Saral Solar Accounting Meter" 
+                                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                                onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/059669?text=Saral+Solar+Meter';"
+                            >
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="text-xs font-semibold text-brand-600 mb-1">Secure Meters</div>
+                            <h3 class="font-bold text-xl text-slate-900 mb-2">Saral Solar Accounting Meter</h3>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                Compact, single-phase direct connected bidirectional energy meter designed for residential solar net metering.
+                            </p>
+                            
+                            <div class="space-y-2 text-xs text-slate-600 mb-6 bg-slate-50 p-3.5 rounded-2xl border border-slate-100">
+                                <div class="flex justify-between"><span>Wiring:</span><strong class="text-slate-800">1-Phase 2-Wire Direct</strong></div>
+                                <div class="flex justify-between"><span>Accuracy Class:</span><strong class="text-slate-800">Class 1.0 (IEC)</strong></div>
+                                <div class="flex justify-between"><span>Voltage & Current:</span><strong class="text-slate-800">230V, 5-30A / 10-60A</strong></div>
+                                <div class="flex justify-between"><span>Feature:</span><strong class="text-slate-800">Anti-Tamper & Optical Port</strong></div>
+                                <div class="flex justify-between"><span>Compliance:</span><strong class="text-brand-600">BPDB / BREB Approved</strong></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 pt-0">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <span class="text-2xl font-black text-slate-900">BDT 4,800</span>
+                                <span class="block text-[10px] text-slate-400">Excl. VAT</span>
+                            </div>
+                            <span class="text-xs text-emerald-600 font-semibold bg-emerald-50 px-2.5 py-1 rounded-full">In Stock</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="openProductDetailModal('saral')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs py-3 rounded-xl transition">
+                                Details
+                            </button>
+                            <button onclick="addToCart('Saral Solar Accounting Meter', 4800, 'SARAL-1P')" class="bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs py-3 rounded-xl transition shadow-md shadow-brand-600/20">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Saral 305 Net Meter -->
+                <div class="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition overflow-hidden flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-60 bg-slate-50 p-4 border-b border-slate-100 flex items-center justify-center overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-cyan-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider z-10">Three Phase</span>
+                            <img 
+                                src="images/saral305net.jpg" 
+                                alt="Saral 305 Net Meter" 
+                                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                                onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/0891b2?text=Premier+300+Meter';"
+                            >
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="text-xs font-semibold text-cyan-600 mb-1">Secure Meters</div>
+                            <h3 class="font-bold text-xl text-slate-900 mb-2">Saral 305 Net Meter</h3>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                Three-phase Direct  Current bidirectional net meter for commercial and industrial solar PV installations.
+                            </p>
+                            
+                            <div class="space-y-2 text-xs text-slate-600 mb-6 bg-slate-50 p-3.5 rounded-2xl border border-slate-100">
+                                <div class="flex justify-between"><span>Wiring:</span><strong class="text-slate-800">3-Phase 4-Wire</strong></div>
+                                <div class="flex justify-between"><span>Accuracy Class:</span><strong class="text-slate-800">Class  1.0</strong></div>
+                                <div class="flex justify-between"><span>Voltage:</span><strong class="text-slate-800">230/400V AC</strong></div>
+                                <div class="flex justify-between"><span>Communication:</span><strong class="text-slate-800">RS485 / DLMS Protocol</strong></div>
+                                <div class="flex justify-between"><span>Compliance:</span><strong class="text-brand-600">DESCO / DPDC / BREB</strong></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 pt-0">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <span class="text-2xl font-black text-slate-900">BDT 14,500</span>
+                                <span class="block text-[10px] text-slate-400">Excl. VAT</span>
+                            </div>
+                            <span class="text-xs text-emerald-600 font-semibold bg-emerald-50 px-2.5 py-1 rounded-full">In Stock</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="openProductDetailModal('premier')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs py-3 rounded-xl transition">
+                                Details
+                            </button>
+                            <button onclick="addToCart('Saral 305 Net Meter', 18500, 'Saral-305')" class="bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs py-3 rounded-xl transition shadow-md shadow-brand-600/20">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Premier 300  LTCT Net Meter -->
+                <div class="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition overflow-hidden flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-60 bg-slate-50 p-4 border-b border-slate-100 flex items-center justify-center overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-amber-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider z-10">High Precision CT</span>
+                            <img 
+                                src="images/premier300net.jpg" 
+                                alt="Prmier300net" 
+                                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                                onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/d97706?text=Prometer+100+Meter';"
+                            >
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="text-xs font-semibold text-amber-600 mb-1">Secure Meters</div>
+                            <h3 class="font-bold text-xl text-slate-900 mb-2">Premier 300 LTCT Net Meter</h3>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                Industrial grade high-precision 4-quadrant bidirectional grid meter for mega solar power plants and heavy industries.
+                            </p>
+                            
+                            <div class="space-y-2 text-xs text-slate-600 mb-6 bg-slate-50 p-3.5 rounded-2xl border border-slate-100">
+                                <div class="flex justify-between"><span>Wiring:</span><strong class="text-slate-800">4-Quadrant CT Operated</strong></div>
+                                <div class="flex justify-between"><span>Accuracy Class:</span><strong class="text-slate-800">Class 0.2s / 0.5s Grid Scale</strong></div>
+                                <div class="flex justify-between"><span>Monitoring:</span><strong class="text-slate-800">Advanced Power Quality (PQ)</strong></div>
+                                <div class="flex justify-between"><span>Communication:</span><strong class="text-slate-800">DLMS Optical</strong></div>
+                                <div class="flex justify-between"><span>Compliance:</span><strong class="text-brand-600">National Grid Code Compliant</strong></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 pt-0">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <span class="text-2xl font-black text-slate-900">BDT 22,000</span>
+                                <span class="block text-[10px] text-slate-400">Excl. VAT</span>
+                            </div>
+                            <span class="text-xs text-emerald-600 font-semibold bg-emerald-50 px-2.5 py-1 rounded-full">In Stock</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="openProductDetailModal('premierr')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs py-3 rounded-xl transition">
+                                Details
+                            </button>
+                            <button onclick="addToCart('Premier 300  LTCT Net Meter', 45000, 'PROMETER-100')" class="bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs py-3 rounded-xl transition shadow-md shadow-brand-600/20">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="netmetering" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold uppercase tracking-widest text-xs bg-brand-50 px-3.5 py-1.5 rounded-full border border-brand-200">Simplified Workflow</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">How Solar Net Metering Works</h2>
+                <p class="text-slate-600 mt-3 text-sm sm:text-base">
+                    Net metering allows solar energy system owners to feed surplus electricity into the grid and offset their utility bills.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 border border-slate-100 p-8 rounded-3xl text-center">
+                    <div class="w-14 h-14 bg-brand-600 text-white rounded-2xl flex items-center justify-center font-black text-xl mx-auto mb-6">1</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Solar Power Generation</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Rooftop solar panels absorb sunlight and convert it into DC power, which grid-tied inverters change into AC electricity for home or facility use.</p>
+                </div>
+                <div class="bg-slate-50 border border-slate-100 p-8 rounded-3xl text-center">
+                    <div class="w-14 h-14 bg-brand-600 text-white rounded-2xl flex items-center justify-center font-black text-xl mx-auto mb-6">2</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Grid Export Measurement</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">When solar generation exceeds local consumption, the extra electricity flows back into the grid through our bidirectional net meter.</p>
+                </div>
+                <div class="bg-slate-50 border border-slate-100 p-8 rounded-3xl text-center">
+                    <div class="w-14 h-14 bg-brand-600 text-white rounded-2xl flex items-center justify-center font-black text-xl mx-auto mb-6">3</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Net Billing & Savings</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Your utility utility calculates the net difference between Imported and Exported kWh units, drastically reducing monthly power bills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-brand-400 font-bold uppercase tracking-widest text-xs bg-brand-500/10 px-3.5 py-1.5 rounded-full border border-brand-500/30">Get In Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Need Metering Equipment & Support?</h2>
+                    <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+                        Green Energy BD provides genuine meter supply along with technical documentation assistance required for BPDB, BREB, DPDC, and DESCO solar net metering approval.
+                    </p>
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center text-brand-400">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <span class="text-sm font-semibold">+880 1569179507</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center text-brand-400">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <span class="text-sm font-semibold">greenenergy4bd@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center text-brand-400">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <span class="text-sm font-semibold">Keraniganj, Dhaka, Bangladesh</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- English Quote Form -->
+                <div class="lg:col-span-6 bg-slate-800 p-8 rounded-3xl border border-slate-700">
+                    <h3 class="text-2xl font-bold text-white mb-6">Request Official Quote</h3>
+                    <form onsubmit="handleQuoteSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs text-slate-300 mb-1">Full Name</label>
+                            <input type="text" id="q-name" required placeholder="John Doe" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 mb-1">Phone Number</label>
+                            <input type="tel" id="q-phone" required placeholder="+880 1569179507" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 mb-1">Select Meter Model</label>
+                            <select id="q-product" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500">
+                                <option>Saral Solar Accounting Meter (Single Phase)</option>
+                                <option>Saral 305 Net Meter (Three Phase)</option>
+                                <option>Premier 300 Net Meter (CT/PT High Precision)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 mb-1">Order / Inquiry Type</label>
+                            <select id="q-type" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500">
+                                <option>Direct Equipment Purchase</option>
+                                <option>Turnkey Installation & Approval</option>
+                                <option>Technical Consultation</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-3.5 rounded-xl transition shadow-lg">
+                            Submit Request <i class="fa-solid fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 text-center space-y-6">
+            <span class="text-brand-600 font-bold uppercase tracking-widest text-xs bg-brand-50 px-3.5 py-1.5 rounded-full border border-brand-200">Who We Are</span>
+            <h2 class="text-3xl font-extrabold text-slate-900">Green Energy BD - Trusted Solar Partner</h2>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Green Energy BD is a premier supplier of utility-approved solar net meters and grid interconnection equipment in Bangladesh. We specialize in bringing top-tier metering technology from global manufacturers like Secure Meters to residential, commercial, and industrial clients across the country.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer in English -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 text-center text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2026 Green Energy BD. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl relative max-h-[90vh] flex flex-col">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                <h3 class="text-xl font-bold text-slate-900"><i class="fa-solid fa-cart-shopping text-brand-600 mr-2"></i> Your Shopping Cart</h3>
+                <button onclick="closeCartModal()" class="w-8 h-8 bg-slate-100 hover:bg-slate-200 rounded-full flex items-center justify-center text-slate-600">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <div id="cart-items-container" class="py-4 overflow-y-auto flex-grow space-y-4">
+                <!-- Dynamic content -->
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 mt-auto">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="font-semibold text-slate-700">Total Price:</span>
+                    <span id="cart-total" class="text-2xl font-black text-slate-900">BDT 0</span>
+                </div>
+                <button onclick="checkoutCart()" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3.5 rounded-xl transition shadow-lg">
+                    Proceed to Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div id="detail-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeProductDetailModal()" class="absolute top-6 right-6 w-9 h-9 bg-slate-100 hover:bg-slate-200 rounded-full flex items-center justify-center text-slate-600">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <div id="detail-modal-content">
+                <!-- Dynamic Product Specs Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="msg-box" class="fixed bottom-6 right-6 z-50 hidden bg-slate-900 text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center space-x-3">
+        <i class="fa-solid fa-circle-check text-brand-400 text-xl"></i>
+        <span id="msg-text" class="text-sm font-medium">Notification</span>
+    </div>
+
+    <script>
+        let cart = [];
+
+        const productDetailsData = {
+            saral: {
+                title: 'Saral Solar Accounting Meter',
+                brand: 'Secure Meters',
+                type: 'Single Phase Direct-Connected Solar Net Meter',
+                price: 'BDT 8,500',
+                description: 'Saral by Secure Meters is an advanced single-phase direct-connected bidirectional net meter engineered specifically for residential solar installations. It records both imported power from the utility grid and exported solar power.',
+                features: [
+                    'Class 1.0 accuracy compliant with IEC standards',
+                    'Anti-tamper protection with reverse wiring detection',
+                    'Optical communication port for local data readout',
+                    '12 months billing history data retention in non-volatile memory',
+                    'IP54 dust and moisture ingress protection'
+                ],
+                specs: [
+                    { label: 'Wiring', val: 'Single Phase, 2-Wire Direct' },
+                    { label: 'Voltage Rating', val: '230V / 240V AC' },
+                    { label: 'Current Rating', val: '5-30A / 10-60A' },
+                    { label: 'Frequency', val: '50 Hz' },
+                    { label: 'Display', val: 'High-contrast LCD with backlighting' }
+                ]
+            },
+            premier: {
+                title: 'Premier 300 Net Meter',
+                brand: 'Secure Meters',
+                type: 'Three Phase CT/PT & Direct Bidirectional Net Meter',
+                price: 'BDT 18,500',
+                description: 'Premier 300 is a high-accuracy three-phase bidirectional energy meter suited for commercial facilities, factories, and medium-scale rooftop solar PV systems.',
+                features: [
+                    'Class 0.5s / Class 1.0 accuracy option',
+                    'Bi-directional 4-quadrant active and reactive energy recording',
+                    'RS485 and optical communication ports with DLMS protocol',
+                    'Time-of-Day (TOD) / Time-of-Use (TOU) tariff tracking',
+                    'Approved by DESCO, DPDC, BREB & BPDB'
+                ],
+                specs: [
+                    { label: 'Wiring', val: 'Three Phase, 4-Wire' },
+                    { label: 'Nominal Voltage', val: '230/400V AC' },
+                    { label: 'Connection Type', val: 'Direct Connected or CT Operated' },
+                    { label: 'Protocol', val: 'DLMS / COSEM open standard' },
+                    { label: 'Enclosure Rating', val: 'IP51 / IP54' }
+                ]
+            },
+            prometer: {
+                title: 'Prometer 100 Net Meter',
+                brand: 'Secure Meters',
+                type: 'Industrial Precision Grid Net Meter',
+                price: 'BDT 45,000',
+                description: 'Prometer 100 is a grid-scale high-precision meter engineered for utility sub-stations, IPP power generation facilities, and mega industrial solar plants requiring exact power quality monitoring.',
+                features: [
+                    'Ultra-high Class 0.2s precision measurement',
+                    'Comprehensive Power Quality (PQ) monitoring including harmonics & sags',
+                    'Multiple concurrent communication interfaces (Ethernet, RS485, Optical)',
+                    'Harmonics measurement up to 31st order',
+                    'Full compliance with National Solar Grid Interconnection Code'
+                ],
+                specs: [
+                    { label: 'Wiring', val: '3-Phase 3-Wire / 3-Phase 4-Wire' },
+                    { label: 'Accuracy Class', val: 'Class 0.2s / Class 0.5s' },
+                    { label: 'Input Current', val: '1A / 5A CT Operated' },
+                    { label: 'Memory', val: 'Extended load survey and event logs' },
+                    { label: 'Compliance', val: 'IEC 62053-22 / Grid Code' }
+                ]
+            }
+        };
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        function addToCart(name, price, model) {
+            const existing = cart.find(item => item.model === model);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ name, price, model, qty: 1 });
+            }
+            updateCartUI();
+            showNotification(`"${name}" added to cart!`);
+        }
+
+        function updateCartUI() {
+            const badge = document.getElementById('cart-badge');
+            const badgeMobile = document.getElementById('cart-badge-mobile');
+            const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+            
+            badge.innerText = totalCount;
+            badgeMobile.innerText = totalCount;
+
+            const container = document.getElementById('cart-items-container');
+            const totalEl = document.getElementById('cart-total');
+
+            if (cart.length === 0) {
+                container.innerHTML = '<div class="text-center py-8 text-slate-400 text-sm">Your cart is currently empty.</div>';
+                totalEl.innerText = 'BDT 0';
+                return;
+            }
+
+            let html = '';
+            let totalAmt = 0;
+
+            cart.forEach((item, index) => {
+                let itemTotal = item.price * item.qty;
+                totalAmt += itemTotal;
+                html += `
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">${item.name}</h4>
+                            <p class="text-xs text-slate-500">BDT ${item.price.toLocaleString()} each</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-sm font-bold text-slate-800">Qty: ${item.qty}</span>
+                            <button onclick="removeFromCart(${index})" class="text-rose-500 hover:text-rose-700 p-1"><i class="fa-solid fa-trash-can"></i></button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+            totalEl.innerText = 'BDT ' + totalAmt.toLocaleString();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+            showNotification('Item removed from cart.');
+        }
+
+        function openCartModal() {
+            document.getElementById('cart-modal').classList.remove('hidden');
+        }
+
+        function closeCartModal() {
+            document.getElementById('cart-modal').classList.add('hidden');
+        }
+
+        function openProductDetailModal(key) {
+            const data = productDetailsData[key];
+            if (!data) return;
+
+            let specsHtml = data.specs.map(s => `
+                <div class="flex justify-between py-1.5 border-b border-slate-100 text-xs">
+                    <span class="text-slate-500">${s.label}:</span>
+                    <span class="font-bold text-slate-800">${s.val}</span>
+                </div>
+            `).join('');
+
+            let featuresHtml = data.features.map(f => `
+                <li class="flex items-start space-x-2 text-xs text-slate-600">
+                    <i class="fa-solid fa-check text-brand-600 mt-0.5"></i>
+                    <span>${f}</span>
+                </li>
+            `).join('');
+
+            document.getElementById('detail-modal-content').innerHTML = `
+                <span class="text-xs font-semibold text-brand-600 uppercase tracking-widest">${data.brand}</span>
+                <h3 class="text-2xl font-black text-slate-900 mt-1">${data.title}</h3>
+                <p class="text-xs text-slate-400 mb-4">${data.type}</p>
+                <div class="text-xl font-bold text-slate-900 mb-4">${data.price} <span class="text-xs text-slate-400 font-normal">(Excl. VAT)</span></div>
+                <p class="text-sm text-slate-600 mb-6 leading-relaxed">${data.description}</p>
+                
+                <h4 class="font-bold text-sm text-slate-900 mb-2">Key Features:</h4>
+                <ul class="space-y-2 mb-6">
+                    ${featuresHtml}
+                </ul>
+
+                <h4 class="font-bold text-sm text-slate-900 mb-2">Technical Specifications:</h4>
+                <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 mb-6">
+                    ${specsHtml}
+                </div>
+
+                <button onclick="addToCart('${data.title}', ${data.price.replace(/[^0-9]/g, '')}, '${key.toUpperCase()}')" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3.5 rounded-xl transition shadow-lg">
+                    <i class="fa-solid fa-cart-plus mr-2"></i> Add to Cart
+                </button>
+            `;
+
+            document.getElementById('detail-modal').classList.remove('hidden');
+        }
+
+        function closeProductDetailModal() {
+            document.getElementById('detail-modal').classList.add('hidden');
+        }
+
+        function checkoutCart() {
+            if (cart.length === 0) return;
+            closeCartModal();
+            showNotification('Thank you! Your order request has been received.');
+            cart = [];
+            updateCartUI();
+        }
+
+        function handleQuoteSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('q-name').value;
+            showNotification(`Thank you ${name}! Your quotation request was submitted successfully.`);
+            e.target.reset();
+        }
+
+        function showNotification(text) {
+            const box = document.getElementById('msg-box');
+            document.getElementById('msg-text').innerText = text;
+            box.classList.remove('hidden');
+            setTimeout(() => { box.classList.add('hidden'); }, 3500);
+        }
+    </script>
+</body>
+</html>
